@@ -126,9 +126,9 @@ namespace ConsoleApp7
             //1.2.23 Write a program that takes two int values m and d from the command line and prints true if day d of month m is between 3 / 20 and 6 / 20, false otherwise.
             int month, day;
             bool ans;
-            Console.Write("Enter the month: ");
+            Console.WriteLine("Enter the month: ");
             month = int.Parse(Console.ReadLine());
-            Console.Write("Enter the day: ");
+            Console.WriteLine("Enter the day: ");
             day = int.Parse(Console.ReadLine());
             if (month == 3)
             {
@@ -173,9 +173,30 @@ namespace ConsoleApp7
             //1.2.24 Loan payments. Write a program that calculates the monthly payments you would have to make over a given number of years to pay off a loan at a given interest rate compounded continuously, taking the number of years t, the principal P, and the annual interest rate r as command - line arguments.The desired value is given by the formula Pe rt. Use Math.exp().
 
 
+            /*1.2.25 Wind chill. Given the temperature t (in Fahrenheit) and the wind speed v
+(in miles per hour), the National Weather Service defines the effective temperature
+(the wind chill) to be:
+w = 35.74 " 0.6215 t " (0.4275 t ! 35.75) v 0.16
+Write a program that takes two double command-line arguments t and v and
+prints out the wind chill. Use Math.pow(a, b) to compute ab. Note : The formula is
+not valid if t is larger than 50 in absolute value or if v is larger than 120 or less than
+3 (you may assume that the values you get are in that range).*/
+            int temp, speed;
+            Console.WriteLine("Enter the temperature: ");
+            temp = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the wind speed: ");
+            speed = int.Parse(Console.ReadLine());
+            if (temp < 50 || speed < 120 || speed > 3)
+            {
+                Console.WriteLine(35.74 + 0.6215 * temp + (0.4275 * temp - 35.75) * Math.Pow(speed, 0.16));
+            }
+            else
+                Console.WriteLine("404:Error - wrong value");
 
 
-            
+
+
+
 
             Console.Write("Press any key to continue...");
             Console.ReadKey();
