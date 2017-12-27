@@ -8,6 +8,7 @@ namespace Loops
 {
     class Program
     {
+        // You did not prepare a PR, which means you are not interested in me looking through the code :(
         static void Main(string[] args)
         {
             string a, b, c, d, e, f, g;
