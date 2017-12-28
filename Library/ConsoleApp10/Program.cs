@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace Loops
+namespace Library
 {
     class Program
     {
@@ -14,10 +14,12 @@ namespace Loops
             int h = 0;
             Console.Write("Do you want to use the program? Enter y/n: ");
             g = Console.ReadLine();
+
             while (g[h] == 'y')
             {
                 Console.Write("Name of your book: ");
                 a = Console.ReadLine();
+
                 StreamWriter NewFile = File.CreateText(@"Library\" + a + ".txt");
                 NewFile.WriteLine("Name: " + a);
 
