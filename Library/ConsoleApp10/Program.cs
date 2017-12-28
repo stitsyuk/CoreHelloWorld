@@ -18,6 +18,7 @@ namespace Loops
             {
                 Console.Write("Name of your book: ");
                 a = Console.ReadLine();
+
                 StreamWriter NewFile = File.CreateText(@"Library\" + a + ".txt");
                 NewFile.WriteLine("Name: " + a);
 
