@@ -12,7 +12,6 @@ namespace Library
         {
             string a, b, c, d, e, f, g;
             int h = 0;
-
             Console.Write("Do you want to use the program? Enter y/n: ");
             g = Console.ReadLine();
 
